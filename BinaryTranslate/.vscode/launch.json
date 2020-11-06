@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BinaryTranslateApplication<BinaryTranslate>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.practice.BinaryTranslate.BinaryTranslateApplication",
+            "projectName": "BinaryTranslate",
+            "args": ""
+        }
+    ]
+}

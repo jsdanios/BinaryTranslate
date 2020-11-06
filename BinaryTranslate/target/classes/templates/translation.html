@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Binary Translate</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" href="../static/main.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="/main.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <h2>Binary Translate</h2>
+
+                    <p id="output" th:text="${translate.content}"></p>
+                    
+                    <button class="btn btn-primary" onclick="copyText('#output')" >Copy</button>
+                    <a class="btn btn-primary" href="/">Translate something else</a>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

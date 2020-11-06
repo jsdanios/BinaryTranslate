@@ -28,22 +28,8 @@ public class TranslateService {
     public String binaryToText(String binary) {
         StringBuffer result = new StringBuffer();
         if (binary.matches("[0-1\s]+")) {
-            if (binary.contains(" ") && binary.length() % 9 == 8) {
-                int check = 0;
-                for (int i = 9; i < binary.length(); i += 9) {
-                    if (!binary.substring(i, i+1).equals(" ")) {
-                        check = 1;
-                    }
-                }
-                if (check == 0) {
-                    for (int i = 0; i < binary.length(); i += 9) {
-                        result.append((char) Integer.parseInt(binary.substring(i, i + 8), 2));
-                    }
-                    return result.toString();
-                } else {
-                    return "Make sure each code is the proper length. Try again.";
-                }
-            } else if (!binary.contains(" ") && binary.length() % 8 == 0) {
+            binary = binary.replaceAll("\\s", "");
+            if (binary.length() % 8 == 0) {
                 for (int i = 0; i < binary.length(); i += 8) {
                     result.append((char) Integer.parseInt(binary.substring(i, i + 8), 2));
                 }
